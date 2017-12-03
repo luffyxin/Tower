@@ -11,12 +11,12 @@
 <head>
         <meta charset="utf-8">
         <title></title>
-        <link rel="stylesheet" href="css/bootstrap.css">
-        <script src="js/jquery-3.2.1.min.js"></script>
-        <script src="js/bootstrap.js"></script>
+        <link rel="stylesheet" href="/css/bootstrap.css">
+        <script src="/js/jquery-3.2.1.min.js"></script>
+        <script src="/js/bootstrap.js"></script>
         <style type="text/css">
                 body{
-                        background: url('img1/bg.jpg') no-repeat;
+                        background: url('/img1/bg.jpg') no-repeat;
                         background-size: 100% 695px;
                         overflow-y: hidden;
                 }
