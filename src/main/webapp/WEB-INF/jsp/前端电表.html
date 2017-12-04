@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/电表Css.css">
+	<script src="js/电表Js.js"></script>
+    <style type="text/css">
+	 body{
+  			background: url('img1/bg.jpg') no-repeat;
+  			background-size: 100% 695px;
+  			overflow-y: hidden;
+	  		}  
+	</style>
+</head>
+<body>
+<div class="main">
+	<div class="title">
+		<span class="mainTitle">物业管理平台</span>
+		<ul>
+			<li><a href="前端电表.html">电表管理</a></li>
+			<li><a href="前端合同表.html">合同信息管理</a></li>
+			<li><a href="前端基站表.html">基站管理</a></li>
+			<li><a href="前端支付申请表.html">支付申请</a></li>
+			<li><a href="前端订单管理表.html">订单管理</a></li>
+		</ul>
+		<span class="load"><a href="#">登录</a></span><span class="exit"><a href="#">退出</a></span>
+	</div>
+
+	<div class="content">	
+		<div class="info">
+			<form action="#" method="get">
+				<div class="cel1">
+					<span>当前位置:</span>
+
+					<select name="provinceName">
+						<option>湖北</option>
+						<option>湖南</option>
+						<option>上海</option>
+						<option>北京</option>
+					</select>
+					<span>省</span>
+						<select name="cityName">
+							<option>湖北</option>
+							<option>湖南</option>
+							<option>上海</option>
+							<option>北京</option>
+						</select>
+					<span>市</span>
+						<select name="areaNamea">
+							<option>湖北</option>
+							<option>湖南</option>
+							<option>上海</option>
+							<option>北京</option>
+						</select>
+					<span>区</span>
+				</div>
+				<div class="cel2">
+					<span>合同编号:</span>
+					<input type="text" name="Contract_code">
+					<span>基站编号:</span>
+					<input type="text" name="baseStation_code">
+					<span>电表类型:</span>
+					<select name="Ammeter_type">
+					<option value="直供电">直供电</option>
+					<option value="转供电">转供电</option>
+					</select>
+					<input type="submit" name="inquiry" class="inquiry" value="查询">
+				</div>
+			</form>
+		</div>
+
+		<button class="add" data-toggle="modal" data-target="#add">新增</button>
+		<div class="table">
+			<div class="tableTitle">
+				<div class="tableTitle_left"></div>
+				<table class="contractTitle">
+					<tr class="tablerow1">
+						<td class="tableCelId" name="Ammeter_code">电表编号</td>
+						<td class="tableCelId" name="baseStation_code">基站编号</td>
+						<td class="tableCel1" name="initialValue">电表初值</td>
+						<td class="tableCel1" name="maxValue">电表最大值</td>
+						<td class="tableCel2" name="Ammeter_type">电表类型</td>
+						<td class="tableCel2" name="Owner_name">所属用户</td>
+						<td colspan="3" >操作</td>
+					</tr>
+				</table>
+			</div>
+			<div class="tableMain">
+				<div class="tableMain_left">
+					<table class="contractTable" cellpadding="0" cellspacing="0">
+						<tr class="tablerow2">
+							<td >123456789012</td>
+							<td >123456789012</td>
+							<td >123</td>
+							<td >456</td>
+							<td >转供电</td>
+							<td >黎明</td>
+							<td ><button class="btn" data-toggle="modal" data-target="#detail">详情</button></td>
+							<td ><button class="btn" data-toggle="modal" data-target="#updata">修改</button></td>
+							<td ><button class="btn" data-toggle="modal" data-target="#delete">删除</button></td>
+						</tr>
+						<tr>
+							<td >123456789012</td>
+							<td >123456789012</td>
+							<td >123</td>
+							<td >456</td>
+							<td >直供电</td>
+							<td >黎明</td>
+							<td ><button class="btn" data-toggle="modal" data-target="#detail">详情</button></td>
+							<td><button class="btn" data-toggle="modal" data-target="#updata">修改</button></td>
+							<td><button class="btn" data-toggle="modal" data-target="#delete">删除</button></td>
+						</tr>
+						<tr>
+							<td >123456789012</td>
+							<td >123456789012</td>
+							<td >123</td>
+							<td >456</td>
+							<td >直供电</td>
+							<td >黎明</td>
+							<td ><button class="btn" data-toggle="modal" data-target="#detail">详情</button></td>
+							<td><button class="btn" data-toggle="modal" data-target="#updata">修改</button></td>
+							<td><button class="btn" data-toggle="modal" data-target="#delete">删除</button></td>
+						</tr>
+						<tr>
+							<td >123456789012</td>
+							<td >123456789012</td>
+							<td >123</td>
+							<td >456</td>
+							<td >转供电</td>
+							<td >黎明</td>
+							<td ><button class="btn" data-toggle="modal" data-target="#detail">详情</button></td>
+							<td ><button class="btn" data-toggle="modal" data-target="#updata">修改</button></td>
+							<td ><button class="btn" data-toggle="modal" data-target="#delete">删除</button></td>
+						</tr>
+						<tr>
+							<td >123456789012</td>
+							<td >123456789012</td>
+							<td >123</td>
+							<td >456</td>
+							<td >直供电</td>
+							<td >黎明</td>
+							<td ><button class="btn" data-toggle="modal" data-target="#detail">详情</button></td>
+							<td ><button class="btn" data-toggle="modal" data-target="#updata">修改</button></td>
+							<td ><button class="btn" data-toggle="modal" data-target="#delete">删除</button></td>
+						</tr>
+						<tr>
+							<td >123456789012</td>
+							<td >123456789012</td>
+							<td >123</td>
+							<td >456</td>
+							<td >直供电</td>
+							<td >黎明</td>
+							<td ><button class="btn" data-toggle="modal" data-target="#detail">详情</button></td>
+							<td ><button class="btn" data-toggle="modal" data-target="#updata">修改</button></td>
+							<td ><button class="btn" data-toggle="modal" data-target="#delete">删除</button></td>
+						</tr>
+						<tr>
+							<td >123456789012</td>
+							<td >123456789012</td>
+							<td >123</td>
+							<td >456</td>
+							<td >转供电</td>
+							<td >黎明</td>
+							<td ><button class="btn" data-toggle="modal" data-target="#detail">详情</button></td>
+							<td><button class="btn" data-toggle="modal" data-target="#updata">修改</button></td>
+							<td><button class="btn" data-toggle="modal" data-target="#delete">删除</button></td>
+						</tr>
+
+					</table><br><br>
+				</div>
+			</div>
+			
+		</div>
+
+		<div class="modal fade" id="updata" tabindex="-1" role="dialog" aria-labelledby="updataLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<input type="button" name="" value="修改电表信息:" class="titleBtn">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+							&times;
+						</button><!-- 右上角关闭按钮 -->
+
+					</div>
+					<div class="modal-body">
+							<form action="#" method="get" class="formFont"
+							name="ammeterForm" id="ammeterForm">
+								<span class="marginStyle1">供电类型：</span><input type="text" name="Ammeter_type" value="转供电" readonly class="GdType"><br><br>
+								<span class="marginStyle1">电表编号：</span><input type="text" name="Ammeter_code" readonly value="12345678901234">
+								<span class="marginStyle1">电表初始值：</span><input type="text" name="initialValue" ><br>
+								<!-- <span class="error">请输入数字！</span> -->
+								<br>
+								<span class="marginStyle1">基站编号：</span><input type="text" name="baseStation_code" readonly value="12345678901234">
+								<span class="marginStyle1">电表最大值：</span><input type="text" name="maxValue"><br><br>
+								<div class="ZgUpdata">
+									<span class="marginStyle1">业主名称：</span><input type="text" name="Owner_name">
+									<span class="marginStyle2">银行账号：</span><input type="text" name="Owner_bankNumber"><br><br>
+									<span class="marginStyle2">开户行：</span><input type="text" name="Owner_bank">
+									<span class="marginStyle2">电表价格：</span><input type="text" name="price"><br><br>
+								</div>
+								<input type="button" data-dismiss="modal" value="关闭" class="btn1">
+								<input type="submit" name="ok" value="提交" class="btn1">
+							</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="add" tabindex="-1" role="dialog" aria-labelledby="addLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<input type="button" name="" value="新增电表信息:" class="titleBtn">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+							&times;
+						</button><!-- 右上角关闭按钮 -->
+
+					</div>
+					<div class="modal-body">
+							<form action="#" method="get" class="formFont">
+								<span class="marginStyle1">供电类型：</span>
+								<select name="Ammeter_type">
+									<option value="直供电">直供电</option>
+									<option value="转供电">转供电</option>
+								</select><br><br>
+								<span class="marginStyle1">电表编号：</span><input type="text" name="Ammeter_code">
+								<span class="marginStyle1">电表初始值：</span><input type="text" name="initialValue"><br><br>
+								<span class="marginStyle1">基站编号：</span><input type="text" name="baseStation_code" >
+								<span class="marginStyle1">电表最大值：</span><input type="text" name="maxValue"><br><br>
+								<div class="ZgAdd">
+									<span class="marginStyle1">业主名称：</span><input type="text" name="Owner_name">
+									<span class="marginStyle2">银行账号：</span><input type="text" name="Owner_bankNumber"><br><br>
+									<span class="marginStyle2">开户行：</span><input type="text" name="Owner_bank">
+									<span class="marginStyle2">电表价格：</span><input type="text" name="price"><br><br>
+								</div>
+								
+								<input type="button" data-dismiss="modal" value="关闭" class="btn1">
+								<input type="submit" name="ok" value="提交" class="btn1">
+							</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="deleteLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content" id="deleteCss">
+					<div class="modal-header">
+						<img src="img1/waring.jpg" width="40" height="40">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+							&times;
+						</button><!-- 右上角关闭按钮 -->
+
+					</div>
+					<div class="modal-body">
+							<form action="#" method="get" >
+								<span>是否删除该信息</span><br>
+								<input type="button" data-dismiss="modal" name="no" value="取消" >
+								<input type="button" name="yes" value="确定" >
+							</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" id="detail" tabindex="-1" role="dialog" aria-labelledby="detailLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<input type="button" name="" value="详情:" class="titleBtn">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+							&times;
+						</button><!-- 右上角关闭按钮 -->
+
+					</div>
+					<div class="modal-body">
+							<form action="#" method="get" class="formFont">
+								<span class="marginStyle1">供电类型：</span><input type="text" name="Ammeter_type" readonly value="转供电" class="GdType">
+								<br><br>
+								<span class="marginStyle1">电表编号：</span><input type="text" name="Ammeter_code" readonly value="1234453654645">
+								<span class="marginStyle1">电表初始值：</span><input type="text" name="initialValue" readonly  value="123"><br><br>
+								<span class="marginStyle1">基站编号：</span><input type="text" name="baseStation_code" readonly  value="2435345345435">
+								<span class="marginStyle1">电表最大值：</span><input type="text" name="maxValue" readonly  value="345"><br><br>
+								<div class="ZgDetail">
+									<span class="marginStyle1">业主名称：</span><input type="text" name="Owner_name" readonly value="李萌">
+									<span class="marginStyle2">银行账号：</span><input type="text" name="Owner_bankNumber" readonly value="2415345432534643"><br><br>
+									<span class="marginStyle2">开户行：</span><input type="text" name="Owner_bank" readonly value="中国建设银行">
+									<span class="marginStyle2">电话号码：</span><input type="text" name="Owner_telephone" readonly value="12353436543"><br><br>
+									<span class="marginStyle1">证件号码：</span><input type="text" name="Owner_IDnumber" readonly value="42118253463646">
+									<span class="marginStyle3">税号：</span><input type="text" name="dutyParagraph" readonly value="01"><br><br>
+								</div>
+								<span class="marginStyle1">机构代码：</span><input type="text" name="organizationCode" readonly value="1101">
+								<span class="marginStyle3">备注：</span><input type="text" name="remark" readonly value="无"><br><br>
+								<input type="button" data-dismiss="modal" value="返回" class="btn1">
+							
+							</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+</div>
+
+</body>
+<!-- <script type="text/javascript">
+$(function () {
+	$('#deleteCss').css({'width':400+'px','height':200+'px'});
+	$('#deleteCss').find('.modal-body').css({'width':300+'px','height':120+'px','border-color':'#fff'});
+	$('.title ul li').eq(0).css({'color':'#fff','background':'#73bf00'});
+	$('.title ul li').mouseout(function(){
+		$('.title ul li').eq(0).css({'color':'#fff','background':'#73bf00'});
+	});
+	$('.tablerow2 td').eq(0).addClass('tableCelId');
+	$('.tablerow2 td').eq(1).addClass('tableCelId');
+	$('.tablerow2 td').eq(2).addClass('tableCel1');
+	$('.tablerow2 td').eq(3).addClass('tableCel1');
+	$('.tablerow2 td').eq(4).addClass('tableCel2');
+	$('.tablerow2 td').eq(5).addClass('tableCel2');
+
+	if($('#add select').val()=="转供电")
+			$('.ZgAdd').show();
+
+	$('#add select').change(function () {
+		if($(this).val()=="转供电")
+			$('.ZgAdd').show();
+		else
+			$('.ZgAdd').hide();
+	});
+
+	if($('#updata .GdType').val()=="转供电")
+		$('.ZgUpdata').show();
+	else
+		$('.ZgUpdata').hide();
+
+	if($('#detail .GdType').val()=="转供电")
+		{
+
+			$('.ZgDetail').show();
+
+		}
+	else
+		$('.ZgDetail').hide();
+})
+</script> -->
+
+
+</html>
